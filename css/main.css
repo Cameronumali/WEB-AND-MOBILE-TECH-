@@ -10,3 +10,22 @@
     outline-offset: 2px;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+.site-header {
+    background: #f8f9fa;
+    padding: 1rem;
+}
