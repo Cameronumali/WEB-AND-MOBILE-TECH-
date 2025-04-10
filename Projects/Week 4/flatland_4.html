@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Flatland - Step 4</title>
+    <meta name="author" content="Cameron Umali">
+    <meta name="description" content="Explore flatland and interact with its inhabitants">
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -26,20 +28,26 @@
             height: 200px;
             background-color: #666;
             border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
     </style>
-    <script>
-        function changeColour(colour) {
-            document.getElementById('square').style.backgroundColor = colour;
-        }
-    </script>
 </head>
 <body>
-    <div id="words"></div>
+    <div id="words">Welcome to Flatland.<br>I am Square.<br>Interact with me!</div>
     <div id="square" 
-         onclick="changeColour('#ff0000')" 
-         onmouseover="changeColour('#00ff00')" 
-         onmouseout="changeColour('#666')">
+        onclick="changeColor('#ff0000', 'Ouch! That hurt!')"
+        onmouseover="changeColor('#00ff00')"
+        onmouseout="changeColor('#666')">
     </div>
+
+    <script>
+        function changeColor(color, message) {
+            document.getElementById('square').style.backgroundColor = color;
+            if (message) {
+                document.getElementById('words').innerHTML = message;
+            }
+        }
+    </script>
 </body>
 </html>

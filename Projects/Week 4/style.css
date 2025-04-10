@@ -1,10 +1,9 @@
 body {
-    font-family: "Helvetica", "Arial", sans-serif;
-    box-sizing: border-box;
-    padding-top: 40px;
+    font-family: Helvetica, Arial, sans-serif;
     width: 550px;
     margin: 0 auto;
-    background-color: #f0f0f0;
+    padding-top: 40px;
+    background-color: #f5f7fa;
 }
 
 #words {
@@ -15,8 +14,9 @@ body {
     text-align: right;
     padding: 5px;
     margin-right: 10px;
-    border-radius: 10px;
-    border-right: 5px solid #2c3e50;
+    border-radius: 10%;
+    border-right: 5px solid #3498db;
+    transition: transform 0.3s ease;
 }
 
 #square {
@@ -24,8 +24,13 @@ body {
     height: 200px;
     background-color: #666;
     border-radius: 15px;
-    transition: background-color 0.3s ease;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#square:hover {
+    transform: scale(1.02);
 }
 
 /* Step List Styles */

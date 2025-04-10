@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Flatland - Step 3</title>
+    <meta name="author" content="Cameron Umali">
+    <meta name="description" content="Explore flatland and interact with its inhabitants">
     <style>
         body {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: "Helvetica", "Arial", sans-serif;
+            box-sizing: border-box;
+            padding-top: 40px;
             width: 550px;
             margin: 0 auto;
-            padding-top: 40px;
         }
+
         #words {
             float: left;
             width: 250px;
@@ -21,6 +25,7 @@
             border-radius: 10%;
             border-right: 5px solid red;
         }
+
         #square {
             width: 200px;
             height: 200px;
@@ -32,11 +37,15 @@
     </style>
 </head>
 <body>
-    <div id="words"></div>
+    <div id="words">
+        Welcome to Flatland.<br>
+        I am Square.<br>
+        Interact with me!
+    </div>
     <div id="square" 
-         onclick="makeRed()" 
-         onmouseover="makeGreen()" 
-         onmouseout="makeGray()">
+        onclick="makeRed()" 
+        onmouseover="makeGreen()" 
+        onmouseout="makeGray()">
     </div>
 
     <script>

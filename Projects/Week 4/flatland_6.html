@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Flatland - Step 6</title>
+    <meta name="author" content="Cameron Umali">
+    <meta name="description" content="Explore flatland and interact with its inhabitants">
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -26,31 +28,41 @@
             height: 200px;
             background-color: #666;
             border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
     </style>
-    <script>
-        window.onload = function() {
-            document.getElementById('words').innerHTML = 
-                "Welcome to Flatland.<br>I am Square.";
-            
-            const square = document.getElementById('square');
-            
-            square.addEventListener('click', function() {
-                this.style.backgroundColor = '#ff0000';
-            });
-            
-            square.addEventListener('mouseover', function() {
-                this.style.backgroundColor = '#00ff00';
-            });
-            
-            square.addEventListener('mouseout', function() {
-                this.style.backgroundColor = '#666';
-            });
-        };
-    </script>
 </head>
 <body>
     <div id="words"></div>
     <div id="square"></div>
+
+    <script>
+        window.onload = function() {
+            const square = document.getElementById('square');
+            const words = document.getElementById('words');
+
+            words.innerHTML = "Welcome to Flatland.<br>I am Square.<br>Interact with me!";
+
+            function changeColor(color, message) {
+                square.style.backgroundColor = color;
+                if (message) {
+                    words.innerHTML = message;
+                }
+            }
+
+            square.addEventListener('click', function() {
+                changeColor('#ff0000', 'Ouch! That hurt!');
+            });
+
+            square.addEventListener('mouseover', function() {
+                changeColor('#00ff00');
+            });
+
+            square.addEventListener('mouseout', function() {
+                changeColor('#666');
+            });
+        };
+    </script>
 </body>
 </html>
