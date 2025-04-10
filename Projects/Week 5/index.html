@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - RSS Dashboard</title>
+    <meta name="description" content="A responsive RSS feed dashboard that displays news from Mozilla Hacks, BBC World News, and DEV Community">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <h1>Week 5: RSS Dashboard</h1>
+        <p>A multi-feed RSS reader with responsive design</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Back to Home</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <section class="introduction paragraph-box">
+            <h2>About This Project</h2>
+            <p>This RSS Dashboard demonstrates the use of JavaScript to fetch and display content from multiple RSS feeds. It features responsive design, error handling, and dynamic content updates.</p>
+        </section>
+
+        <section class="rss-dashboard" aria-live="polite">
+            <div class="dashboard-container paragraph-box">
+                <div class="feed-controls">
+                    <label for="feed-selector">Choose a news source:</label>
+                    <select id="feed-selector" class="feed-selector">
+                        <option value="https://hacks.mozilla.org/feed/">Mozilla Hacks</option>
+                        <option value="http://feeds.bbci.co.uk/news/world/rss.xml">BBC World News</option>
+                        <option value="https://dev.to/feed/">DEV Community</option>
+                    </select>
+                </div>
+
+                <div id="loading" class="loading" aria-hidden="true">
+                    Loading feed...
+                </div>
+
+                <div id="error" class="error" aria-hidden="true" aria-live="assertive">
+                </div>
+
+                <div id="content" class="feed-content">
+                    <!-- RSS feed content will be inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cameron Umali 21312113</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

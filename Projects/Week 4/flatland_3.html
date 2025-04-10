@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flatland - Step 3</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            width: 550px;
+            margin: 0 auto;
+            padding-top: 40px;
+        }
+        #words {
+            float: left;
+            width: 250px;
+            height: 200px;
+            font-size: 25px;
+            text-align: right;
+            padding: 5px;
+            margin-right: 10px;
+            border-radius: 10%;
+            border-right: 5px solid red;
+        }
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: #666;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="words"></div>
+    <div id="square" 
+         onclick="makeRed()" 
+         onmouseover="makeGreen()" 
+         onmouseout="makeGray()">
+    </div>
+
+    <script>
+        function makeGreen() {
+            document.getElementById('square').style.backgroundColor = '#00ff00';
+        }
+        function makeGray() {
+            document.getElementById('square').style.backgroundColor = '#666';
+        }
+        function makeRed() {
+            document.getElementById('square').style.backgroundColor = '#ff0000';
+        }
+    </script>
+</body>
+</html>
