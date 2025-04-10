@@ -84,3 +84,39 @@
 .hamburger::after {
     top: 8px;
 }
+
+.main-content {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+
+.site-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
