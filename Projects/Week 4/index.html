@@ -6,6 +6,7 @@
     <title>Week 4 - Flatland Evolution</title>
     <meta name="description" content="A step-by-step demonstration of JavaScript event handling and DOM manipulation">
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         .step-list {
             max-width: 600px;
@@ -32,24 +33,27 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header class="site-header" role="banner">
-        <h1>Flatland Evolution</h1>
-        <p>A Journey Through JavaScript Event Handling</p>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Flatland Evolution</h1>
+            <p class="tagline">A Journey Through JavaScript Event Handling</p>
+        </div>
     </header>
 
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <nav class="main-nav" aria-label="Main navigation">
         <ul class="nav-list">
             <li><a href="../../index.html">Back to Home</a></li>
         </ul>
     </nav>
 
-    <main id="main-content" class="main-content" role="main">
-        <div class="paragraph-box">
+    <main id="main-content" class="main-content">
+        <div class="intro-text paragraph-box">
             <p>This project demonstrates the evolution of JavaScript event handling and DOM manipulation through eight progressive steps. Each step builds upon the previous one, showing different approaches to handling user interactions.</p>
         </div>
 
-        <section class="flatland-steps">
-            <ol class="step-list paragraph-box">
+        <section class="flatland-section" aria-labelledby="steps-heading">
+            <h2 id="steps-heading">Evolution Steps</h2>
+            <ol class="step-list">
                 <li class="step-item">
                     <a href="flatland_1.html" class="step-link">
                         Step 1: Basic Structure
@@ -102,7 +106,7 @@
         </section>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer">
         <p>&copy; 2025 Cameron Umali 21312113</p>
     </footer>
 </body>
