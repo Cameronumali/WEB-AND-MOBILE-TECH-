@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors Game</title>
+    <meta name="description" content="Play a fun game of Rock Paper Scissors">
+    <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -83,39 +85,56 @@
     </style>
 </head>
 <body>
-    <div class="game-container">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="site-header" role="banner">
         <h1>Rock Paper Scissors</h1>
-        
-        <div class="choices">
-            <button class="choice-btn" data-choice="rock">
-                <i class="fas fa-hand-rock"></i>
-            </button>
-            <button class="choice-btn" data-choice="paper">
-                <i class="fas fa-hand-paper"></i>
-            </button>
-            <button class="choice-btn" data-choice="scissors">
-                <i class="fas fa-hand-scissors"></i>
-            </button>
-        </div>
+        <p>Test your luck against the computer!</p>
+    </header>
 
-        <div class="scoreboard">
-            <div class="score-item">
-                <h3>Wins</h3>
-                <span id="wins">0</span>
-            </div>
-            <div class="score-item">
-                <h3>Losses</h3>
-                <span id="losses">0</span>
-            </div>
-            <div class="score-item">
-                <h3>Draws</h3>
-                <span id="draws">0</span>
-            </div>
-        </div>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="../../index.html">Back to Home</a></li>
+        </ul>
+    </nav>
 
-        <div id="result"></div>
-        <button id="reset-btn">Reset Score</button>
-    </div>
+    <main id="main-content" class="main-content" role="main">
+        <div class="game-container paragraph-box">
+            <div class="choices">
+                <button class="choice-btn" data-choice="rock" aria-label="Choose Rock">
+                    <i class="fas fa-hand-rock"></i>
+                </button>
+                <button class="choice-btn" data-choice="paper" aria-label="Choose Paper">
+                    <i class="fas fa-hand-paper"></i>
+                </button>
+                <button class="choice-btn" data-choice="scissors" aria-label="Choose Scissors">
+                    <i class="fas fa-hand-scissors"></i>
+                </button>
+            </div>
+
+            <div class="scoreboard">
+                <div class="score-item">
+                    <h3>Wins</h3>
+                    <span id="wins">0</span>
+                </div>
+                <div class="score-item">
+                    <h3>Losses</h3>
+                    <span id="losses">0</span>
+                </div>
+                <div class="score-item">
+                    <h3>Draws</h3>
+                    <span id="draws">0</span>
+                </div>
+            </div>
+
+            <div id="result" aria-live="polite"></div>
+            <button id="reset-btn">Reset Score</button>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>&copy; 2025 Cameron Umali 21312113</p>
+    </footer>
 
     <script>
         let scores = {
@@ -171,7 +190,13 @@
         }
 
         function updateScores(result) {
-            scores[result + 's']++;
+            if (result === 'win') {
+                scores.wins++;
+            } else if (result === 'lose') {
+                scores.losses++;
+            } else {
+                scores.draws++;
+            }
             updateScoreboard();
         }
 
