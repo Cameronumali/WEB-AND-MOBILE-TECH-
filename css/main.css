@@ -29,3 +29,25 @@
     background: #f8f9fa;
     padding: 1rem;
 }
+
+.main-nav {
+    margin-top: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+}
+
+.nav-list a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+}
