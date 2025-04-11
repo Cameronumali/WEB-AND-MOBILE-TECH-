@@ -1,9 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/**
+ * Main Stylesheet for Web and Mobile Technology Portfolio
+ * Author: Cameron Umali
+ * Course: Business Web and Mobile Technology
+ * Semester: 1, 2025
+ */
 
+/* CSS Variables for consistent theming */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -14,6 +16,14 @@
     --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     --border-radius: 8px;
     --spacing-unit: 1rem;
+    --transition-speed: 0.3s;
+}
+
+/* Reset default styles and set base typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :focus {
@@ -35,6 +45,7 @@
     top: 0;
 }
 
+/* Base layout and typography */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -45,6 +56,7 @@ body {
     padding: calc(var(--spacing-unit) * 1.25);
 }
 
+/* Header and Navigation Styles */
 header {
     background: var(--primary-color);
     padding: calc(var(--spacing-unit) * 2);
@@ -135,6 +147,7 @@ nav {
     top: 8px;
 }
 
+/* Main Content Area */
 main {
     padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
     max-width: 1200px;
@@ -180,6 +193,7 @@ section h2 {
     margin-bottom: var(--spacing-unit);
 }
 
+/* Footer Styles */
 footer {
     background: var(--primary-color);
     color: var(--light-text);
@@ -272,6 +286,8 @@ footer {
     background: #c0392b;
 }
 
+/* Responsive Design */
+/* Tablet Styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -308,5 +324,16 @@ footer {
     
     .scoreboard {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin: 1rem 0;
     }
 }
