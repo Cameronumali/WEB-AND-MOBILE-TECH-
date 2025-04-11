@@ -26,6 +26,7 @@ function initMobileMenu() {
     
     if (menuToggle && navList) {
         menuToggle.addEventListener('click', () => {
+            console.log('Menu toggle clicked');
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
             navList.classList.toggle('active');
