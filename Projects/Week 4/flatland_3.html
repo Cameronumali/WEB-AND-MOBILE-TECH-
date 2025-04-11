@@ -5,6 +5,19 @@
     <title>Flatland - Step 3</title>
     <meta name="author" content="Cameron Umali">
     <meta name="description" content="Explore flatland and interact with its inhabitants">
+</head>
+    <script>
+        
+        function makeGreen() {
+            document.getElementById('square').style.backgroundColor = '#00ff00' ;
+        }
+        function makeGray() {
+            document.getElementById('square').style.backgroundColor = '#666';
+        }
+        function makeRed() {
+            document.getElementById('square').style.backgroundColor = '#ff0000';
+        }
+    </script>
     <style>
         body {
             font-family: "Helvetica", "Arial", sans-serif;
@@ -35,29 +48,20 @@
             transition: background-color 0.3s ease;
         }
     </style>
-</head>
+
 <body>
     <div id="words">
         Welcome to Flatland.<br>
         I am Square.<br>
         Interact with me!
     </div>
-    <div id="square" 
-        onclick="makeRed()" 
-        onmouseover="makeGreen()" 
-        onmouseout="makeGray()">
-    </div>
+    
 
-    <script>
-        function makeGreen() {
-            document.getElementById('square').style.backgroundColor = '#00ff00';
-        }
-        function makeGray() {
-            document.getElementById('square').style.backgroundColor = '#666';
-        }
-        function makeRed() {
-            document.getElementById('square').style.backgroundColor = '#ff0000';
-        }
-    </script>
+    
+<div id="square" 
+    onclick="makeRed()" 
+    onmouseover="makeGreen()" 
+    onmouseout="makeGray()">
+</div>
 </body>
 </html>
