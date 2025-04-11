@@ -93,6 +93,7 @@ nav {
     box-shadow: var(--box-shadow);
 }
 
+/* Default styles for desktop */
 .nav-list {
     list-style: none;
     display: flex;
@@ -302,25 +303,16 @@ footer {
 /* Tablet Styles */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: none; /* Hide the toggle button */
     }
 
     .nav-list {
-        display: none;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack links vertically */
         width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
         background: var(--secondary-color);
         padding: var(--spacing-unit);
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
-    }
-
-    .nav-list.active {
-        display: flex;
     }
 
     .nav-list li {
