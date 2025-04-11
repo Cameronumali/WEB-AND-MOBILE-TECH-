@@ -1,53 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Flatland - Step 4</title>
+    <title>Flatland</title>
     <meta name="author" content="Cameron Umali">
     <meta name="description" content="Explore flatland and interact with its inhabitants">
-    <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            width: 550px;
-            margin: 0 auto;
-            padding-top: 40px;
-        }
-        #words {
-            float: left;
-            width: 250px;
-            height: 200px;
-            font-size: 25px;
-            text-align: right;
-            padding: 5px;
-            margin-right: 10px;
-            border-radius: 10%;
-            border-right: 5px solid red;
-        }
-        #square {
-            width: 200px;
-            height: 200px;
-            background-color: #666;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
+
 <body>
-    <div id="words">Welcome to Flatland.<br>I am Square.<br>Interact with me!</div>
-    <div id="square" 
-        onclick="changeColor('#ff0000', 'Ouch! That hurt!')"
-        onmouseover="changeColor('#00ff00')"
-        onmouseout="changeColor('#666')">
+    <div id="words">
+   
     </div>
+    <div id="square" onclick="changeColour('green')" onmouseover="changeColour('gray')" onmouseout="changeColour('red')"></div>
 
     <script>
-        function changeColor(color, message) {
-            document.getElementById('square').style.backgroundColor = color;
-            if (message) {
-                document.getElementById('words').innerHTML = message;
-            }
+      
+        let square = document.getElementById('square');
+
+        function changeColour(colour) {
+            square.style.background = colour;
         }
     </script>
 </body>
+
 </html>

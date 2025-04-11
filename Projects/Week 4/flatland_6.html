@@ -1,68 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Flatland - Step 6</title>
+    <title>Flatland</title>
     <meta name="author" content="Cameron Umali">
     <meta name="description" content="Explore flatland and interact with its inhabitants">
-    <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            width: 550px;
-            margin: 0 auto;
-            padding-top: 40px;
-        }
-        #words {
-            float: left;
-            width: 250px;
-            height: 200px;
-            font-size: 25px;
-            text-align: right;
-            padding: 5px;
-            margin-right: 10px;
-            border-radius: 10%;
-            border-right: 5px solid red;
-        }
-        #square {
-            width: 200px;
-            height: 200px;
-            background-color: #666;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <div id="words"></div>
+
+
+<body onload="greeting()">
+    <div id="words">
+        
+    </div>
     <div id="square"></div>
 
+
     <script>
-        window.onload = function() {
-            const square = document.getElementById('square');
-            const words = document.getElementById('words');
+       
+        let square = document.getElementById('square');
 
-            words.innerHTML = "Welcome to Flatland.<br>I am Square.<br>Interact with me!";
+        
+        square.addEventListener('click', (event) => changeColour('green'));
+        
+        square.addEventListener('mouseover', (event) => changeColour('gray'));
+        square.addEventListener('mouseout', (event) => changeColour('red'));
 
-            function changeColor(color, message) {
-                square.style.backgroundColor = color;
-                if (message) {
-                    words.innerHTML = message;
-                }
-            }
+        function changeColour(colour) {
+            square.style.background = colour;
+        }
 
-            square.addEventListener('click', function() {
-                changeColor('#ff0000', 'Ouch! That hurt!');
-            });
+        
+        let words = document.getElementById('words');
 
-            square.addEventListener('mouseover', function() {
-                changeColor('#00ff00');
-            });
-
-            square.addEventListener('mouseout', function() {
-                changeColor('#666');
-            });
-        };
+        function greeting() {
+            
+            words.innerHTML = "Welcome to Flatland.<br> I am Square.";
+        }
     </script>
 </body>
+
 </html>

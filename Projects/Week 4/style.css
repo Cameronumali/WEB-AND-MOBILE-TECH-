@@ -1,12 +1,20 @@
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Helvetica", "Arial", sans-serif;
+    box-sizing: border-box;
+    padding-top: 40px;
     width: 550px;
     margin: 0 auto;
-    padding-top: 40px;
-    background-color: #f5f7fa;
-}
-
-#words {
+  }
+  
+  #square {
+    float:left;
+    width: 200px;
+    height: 200px;
+    background: red;
+  }
+  
+  #words {
     float: left;
     width: 250px;
     height: 200px;
@@ -15,117 +23,5 @@ body {
     padding: 5px;
     margin-right: 10px;
     border-radius: 10%;
-    border-right: 5px solid #3498db;
-    transition: transform 0.3s ease;
-}
-
-#square {
-    width: 200px;
-    height: 200px;
-    background-color: #666;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-#square:hover {
-    transform: scale(1.02);
-}
-
-/* Step List Styles */
-.step-list {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0;
-    list-style-position: inside;
-}
-
-.step-item {
-    background: var(--background-color);
-    margin: 0.75rem 0;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    box-shadow: var(--box-shadow);
-    border-left: 4px solid var(--secondary-color);
-}
-
-.step-item:hover {
-    transform: translateX(10px);
-    background: white;
-}
-
-.step-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    display: block;
-}
-
-.step-link small {
-    display: block;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    margin-top: 0.25rem;
-    opacity: 0.8;
-}
-
-/* Introduction Text */
-.intro-text {
-    max-width: 800px;
-    margin: 2rem auto;
-    line-height: 1.8;
-    color: var(--text-color);
-}
-
-/* Section Styles */
-.flatland-section {
-    margin: 3rem auto;
-    padding: 0 1rem;
-}
-
-.flatland-section h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    position: relative;
-    padding-bottom: 0.75rem;
-}
-
-.flatland-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: var(--secondary-color);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .step-list {
-        margin: 1.5rem 1rem;
-    }
-
-    .step-item {
-        padding: 1rem;
-    }
-
-    .flatland-section h2 {
-        font-size: 1.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .step-item:hover {
-        transform: translateX(5px);
-    }
-
-    .step-link small {
-        font-size: 0.85rem;
-    }
-}
+    border-right: 5px solid red;
+  }

@@ -131,6 +131,9 @@ nav {
     border: none;
     cursor: pointer;
     padding: calc(var(--spacing-unit) * 0.5);
+    position: absolute;
+    right: var(--spacing-unit);
+    top: var(--spacing-unit);
 }
 
 .hamburger {
@@ -309,11 +312,28 @@ footer {
         display: none;
         flex-direction: column;
         width: 100%;
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--secondary-color);
+        padding: var(--spacing-unit);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
     }
 
     .nav-list.active {
         display: flex;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list a {
+        display: block;
+        width: 100%;
+        padding: var(--spacing-unit);
     }
 
     section h2 {

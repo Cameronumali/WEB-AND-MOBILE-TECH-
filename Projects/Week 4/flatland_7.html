@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Flatland - Step 7</title>
+    <title>Flatland</title>
     <meta name="author" content="Cameron Umali">
     <meta name="description" content="Explore flatland and interact with its inhabitants">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
+
 <body>
-    <div id="words">Welcome to Flatland.<br>I am Square.<br>Interact with me!</div>
+    <div id="words">
+        
+    </div>
     <div id="square"></div>
-    <script src="script.js"></script>
+
+
+    <script>
+        
+        let square = document.getElementById('square');
+
+        
+        
+        let words = document.getElementById('words');
+        
+        document.onload = greeting();
+
+        
+        square.addEventListener('click', (event) => changeColour('green'));
+        
+        square.addEventListener('mouseover', (event) => changeColour('gray'));
+        square.addEventListener('mouseout', (event) => changeColour('red'));
+
+        function changeColour(colour) {
+            square.style.background = colour;
+        }
+
+        function greeting() {
+            console.log("Welcome to Flatland. I am Square.");
+          
+            words.innerHTML = "Welcome to Flatland.<br> I am Square.";
+        }
+    </script>
 </body>
+
 </html>

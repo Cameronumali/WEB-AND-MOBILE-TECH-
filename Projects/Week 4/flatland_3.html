@@ -1,66 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flatland - Step 3</title>
+    <title>Flatland</title>
     <meta name="author" content="Cameron Umali">
     <meta name="description" content="Explore flatland and interact with its inhabitants">
-    <style>
-        body {
-            font-family: "Helvetica", "Arial", sans-serif;
-            box-sizing: border-box;
-            padding-top: 40px;
-            width: 550px;
-            margin: 0 auto;
-            background-color: #f5f7fa;
-        }
-
-        #words {
-            float: left;
-            width: 250px;
-            height: 200px;
-            font-size: 25px;
-            text-align: right;
-            padding: 5px;
-            margin-right: 10px;
-            border-radius: 10%;
-            border-right: 5px solid #3498db;
-        }
-
-        #square {
-            width: 200px;
-            height: 200px;
-            background-color: #666;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #square:hover {
-            background-color: #00ff00;
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const square = document.getElementById('square');
-            
-            square.addEventListener('click', function() {
-                this.style.backgroundColor = '#ff0000';
-            });
-
-            square.addEventListener('mouseout', function() {
-                this.style.backgroundColor = '#666';
-            });
-        });
-    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
+
 <body>
     <div id="words">
-        Welcome to Flatland.<br>
-        I am Square.<br>
-        Interact with me!
+     
     </div>
-    <div id="square"></div>
+    <div id="square" onclick="makeGreen()" onmouseover="makeGray()" onmouseout="makeRed()"></div>
+
+    <script>
+        function makeGreen() {
+            document.getElementById('square').style.background = "green";
+        }
+
+        function makeGray() {
+            document.getElementById('square').style.background = "gray";
+        }
+
+        function makeRed() {
+            document.getElementById('square').style.background = "red";
+        }
+    </script>
 </body>
+
 </html>

@@ -22,12 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function initMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const navList = document.querySelector('.nav-list');
     
-    if (menuToggle && navMenu) {
+    if (menuToggle && navList) {
         menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            navList.classList.toggle('active');
         });
     }
 }
